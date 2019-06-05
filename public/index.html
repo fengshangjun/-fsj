@@ -304,14 +304,17 @@
     </script>
   <script src="assets/vendors/art-template/template-web.js"></script>
   <script src="assets/js/home.js"></script>
+  <script src="assets/js/recommend.js"></script>
 
   <script type="text/html" id="homeTpl">
-  <li>
-            <a href="/detail.html?id={{$value.link}}">
+    {{each data}}
+        <li>
+            <a href="/detail.html?id={{$value._id}}">
               <img src="{{$value.image}}">
               <span>{{$value.title}}</span>
             </a>
           </li>
+          {{/each}}
   </script>
   
 </body>
